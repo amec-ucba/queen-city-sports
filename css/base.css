@@ -1,0 +1,374 @@
+/* ==========================================================================
+   Queen City Sports: base.css
+   The default stylesheet for every page.
+   ========================================================================== */
+
+/* Page basics
+----------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f7f5f0;
+  color: #1c1c1c;
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 2rem 0 1rem;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 40rem;
+  margin: 0.5rem 0 0;
+  color: #5f5f5f;
+  font-size: 1.1rem;
+}
+
+/* Header & Navigation
+----------------------------------------------------------------------------- */
+
+header {
+  background-color: #1f3a5f;
+  color: #ffffff;
+}
+
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.brand {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a[aria-current="page"] {
+  background-color: #ffffff;
+  color: #1f3a5f;
+}
+
+/* Logos
+----------------------------------------------------------------------------- */
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  flex: none;
+  object-fit: contain;
+}
+
+/* Home page
+----------------------------------------------------------------------------- */
+
+.hero {
+  padding: 2rem 0 1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  gap: 1rem;
+}
+
+.team-tile {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e1ddd3;
+  border-top: 0.5rem solid #1f3a5f;
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.team-tile.featured {
+  grid-column: 1 / -1;
+}
+
+.team-tile:hover h3,
+.team-tile:focus-visible h3 {
+  text-decoration: underline;
+}
+
+.team-tile .top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.team-tile h3 {
+  margin: 0;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.team-tile p {
+  margin: 0.2rem 0 0;
+  color: #5f5f5f;
+  font-size: 0.85rem;
+}
+
+.team-tile .next {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #e1ddd3;
+  color: #1c1c1c;
+  font-size: 0.85rem;
+}
+
+.team-tile .go {
+  display: block;
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  background-color: #1f3a5f;
+  color: #ffffff;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Team page
+----------------------------------------------------------------------------- */
+
+.team-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0 1rem;
+}
+
+.team-hero .logo {
+  width: 8rem;
+  height: 8rem;
+}
+
+.kicker {
+  margin: 0;
+  color: #1f3a5f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 0;
+}
+
+.facts div {
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e1ddd3;
+  border-left: 0.35rem solid #1f3a5f;
+  border-radius: 6px;
+}
+
+.facts dt {
+  color: #5f5f5f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.facts dd {
+  margin: 0.2rem 0 0;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Home game calendar
+----------------------------------------------------------------------------- */
+
+.month h3 {
+  margin: 2rem 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #e1ddd3;
+  color: #5f5f5f;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.month ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.month li {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e1ddd3;
+}
+
+time {
+  display: block;
+  text-align: center;
+}
+
+time b {
+  display: block;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+time span {
+  color: #5f5f5f;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e1ddd3;
+  border-left: 0.5rem solid #1f3a5f;
+  border-radius: 6px;
+}
+
+.game h4 {
+  margin: 0;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.game p {
+  margin: 0;
+  color: #5f5f5f;
+  font-size: 0.85rem;
+}
+
+.time {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.4rem;
+  background-color: #1f3a5f;
+  color: #ffffff;
+  border-radius: 3px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* Footer
+----------------------------------------------------------------------------- */
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e1ddd3;
+  color: #5f5f5f;
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin: 0;
+}
