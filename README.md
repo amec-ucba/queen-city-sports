@@ -1,7 +1,7 @@
-# 💻 Assignment Boilerplate
+# 🏟️ Queen City Sports: Team Themes with CSS Variables
 
-A starting point for assignment and exercise repos. It includes submission instructions, editor and Git configuration,
-and a pull request template so every assignment works the same way.
+Give each Cincinnati team page its own colors by replacing the hard-coded colors in `css/base.css` with CSS variables,
+then setting those variables in a small tokens file for each team.
 
 > [!NOTE]
 > `.editorconfig`, `.gitattributes`, `.gitignore`, `.noai`, and the `.github` and `.idea`
@@ -13,6 +13,20 @@ and a pull request template so every assignment works the same way.
 > **Start here: [read ASSIGNMENT.md →](.github/ASSIGNMENT.md)**
 
 It has the requirements, grading criteria, and due date. Read it before you start, and check it again before you submit.
+
+## 🧮 Rubric
+
+The full rubric, with what earns full and partial credit, is in [ASSIGNMENT.md](.github/ASSIGNMENT.md#-grading).
+
+| Criteria                                                                         | Points  |
+|----------------------------------------------------------------------------------|---------|
+| Every color in `base.css` uses `var()` with the original color as a fallback     | 4       |
+| Five tokens files in `css/tokens/`, each setting all eight variables in `:root`  | 4       |
+| Each team page links its own tokens file before `base.css`; home page links none | 2       |
+| Home page looks exactly like the starter                                         | 2       |
+| Colors match each team and text passes 4.5:1 contrast                            | 2       |
+| Code quality and commit messages                                                 | 1       |
+| **Total**                                                                        | **15**  |
 
 ## ✅ At a Glance
 
